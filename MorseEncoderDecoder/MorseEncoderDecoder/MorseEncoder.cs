@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace MorseEncoderDecoder
 {
@@ -22,7 +18,7 @@ namespace MorseEncoderDecoder
                 return string.Empty;
             }
 
-            stringToEncode = stringToEncode.ToLower();
+            stringToEncode = stringToEncode.Trim().ToLower();
             var stringEncoded = new StringBuilder(string.Empty);
 
             foreach (char c in stringToEncode)
@@ -63,6 +59,7 @@ namespace MorseEncoderDecoder
                 {'x', "-..-"},
                 {'y', "-.--"},
                 {'z', "--.."},
+
                 {'1', ".----"},
                 {'2', "..---"},
                 {'3', "...--"},
@@ -71,8 +68,19 @@ namespace MorseEncoderDecoder
                 {'6', "-...."},
                 {'7', "--..."},
                 {'8', "---.."},
-                {'9' , "----."},
-                {'0', "-----"}
+                {'9', "----."},
+                {'0', "-----"},
+
+                {'?', "..---.."},
+                {'!', "-.-.--"},
+                {'.', ".-.-.-"},
+                {',', "--..--"},
+                {';', "-.-.-."},
+                {':', "---..."},
+                {'+', ".-.-."},
+                {'-', "-....-"},
+                {'/', "-..-."},
+                {'=', "-...-"}
             };
         }
     }
